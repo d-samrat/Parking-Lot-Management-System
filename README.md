@@ -1,12 +1,7 @@
-# 🚗 Parking Lot Management System
+# Parking Lot Management System
 
-
-
-## 📌 Overview
 
 Low-Level Design implementation of a Parking Lot Management System using Java.
-
-
 
 This project demonstrates:
 
@@ -19,12 +14,10 @@ This project demonstrates:
 - Clean architecture \& separation of concerns
 
 
-
 ---
 
 
-
-## 🏗 Architecture
+## Architecture
 
 - ParkingLot → Contains multiple ParkingFloor
 
@@ -39,12 +32,10 @@ This project demonstrates:
 - PricingStrategy → Billing logic
 
 
-
 ---
 
 
-
-## ⚙ Features
+## Features
 
 - Multi-floor parking
 
@@ -59,12 +50,10 @@ This project demonstrates:
 - Exception handling
 
 
-
 ---
 
 
-
-## 🧠 Concepts Used
+## Concepts Used
 
 - Abstraction
 
@@ -83,12 +72,10 @@ This project demonstrates:
 - Custom Exceptions
 
 
-
 ---
 
 
-
-## 🚀 How to Run
+## How to Run
 
 Run the `Main` class inside:
 
