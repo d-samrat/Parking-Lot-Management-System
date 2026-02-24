@@ -1,0 +1,25 @@
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/parking_lot_db</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">0000</property>
+
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping class="com.parkinglot.model.ParkingLot"/>
+        <mapping class="com.parkinglot.model.ParkingFloor"/>
+        <mapping class="com.parkinglot.model.ParkingSpot"/>
+        <mapping class="com.parkinglot.model.spots.SmallSpot"/>
+        <mapping class="com.parkinglot.model.spots.MediumSpot"/>
+        <mapping class="com.parkinglot.model.spots.LargeSpot"/>
+        <mapping class="com.parkinglot.model.Ticket"/>
+
+        <mapping class="com.parkinglot.model.Vehicle"/>
+        <mapping class="com.parkinglot.model.vehicles.Car"/>
+        <mapping class="com.parkinglot.model.vehicles.Bike"/>
+        <mapping class="com.parkinglot.model.vehicles.Truck"/>
+
+    </session-factory>
+</hibernate-configuration>
