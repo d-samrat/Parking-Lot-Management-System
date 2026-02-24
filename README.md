@@ -1,6 +1,6 @@
-# 🚗 Parking Lot Management System (Hibernate + PostgreSQL)
+# Parking Lot Management System (Hibernate + PostgreSQL)
 
-## 📌 Overview
+## Overview
 A database-driven Parking Lot Management System built using Java, Hibernate ORM, and PostgreSQL.
 
 This project demonstrates real-world backend design principles including:
@@ -12,7 +12,7 @@ This project demonstrates real-world backend design principles including:
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 The project follows a layered structure:
 
@@ -31,7 +31,7 @@ Main → Service → Repository → Hibernate Session → PostgreSQL
 
 ---
 
-## 🧠 Core Features
+## Core Features
 
 - Multi-floor parking structure
 - Vehicle persistence using inheritance mapping
@@ -44,7 +44,7 @@ Main → Service → Repository → Hibernate Session → PostgreSQL
 
 ---
 
-## 🗃 Database Design
+## Database Design
 
 ### Tables:
 - `parking_lot`
@@ -64,7 +64,7 @@ Inheritance Strategy:
 
 ---
 
-## ⚙ Technologies Used
+## Technologies Used
 
 - Java 17+
 - Hibernate ORM (JPA)
@@ -74,7 +74,7 @@ Inheritance Strategy:
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Create PostgreSQL database:
 
@@ -95,7 +95,7 @@ hibernate.hbm2ddl.auto=update
 
 ---
 
-## 📊 Example Capabilities
+## Example Capabilities
 
 - Park a vehicle
 - Generate ticket
@@ -106,7 +106,7 @@ hibernate.hbm2ddl.auto=update
 
 ---
 
-## 🎯 Concepts Demonstrated
+## Concepts Demonstrated
 
 - JPA Entity Mapping
 - @OneToMany / @ManyToOne relationships
@@ -120,7 +120,7 @@ hibernate.hbm2ddl.auto=update
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Convert to Spring Boot REST API
 - Add authentication & admin dashboard
@@ -130,7 +130,7 @@ hibernate.hbm2ddl.auto=update
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Samrat Dudgundi  
 GitHub: https://github.com/d-samrat
