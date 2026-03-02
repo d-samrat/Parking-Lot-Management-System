@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Panel</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            min-width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            color: #2a5298;
+        }
+
+        .menu a {
+            display: block;
+            margin: 12px 0;
+            padding: 12px;
+            text-decoration: none;
+            background-color: #2a5298;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #1e3c72;
+            transform: translateY(-2px);
+        }
+
+        .back-btn {
+            background-color: #27ae60 !important;
+        }
+
+        .back-btn:hover {
+            background-color: #1e8449 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>🛠 Admin Panel</h2>
+
+    <div class="menu">
+        <a th:href="@{/admin/add-lot}">Add Parking Lot</a>
+        <a th:href="@{/admin/add-floor}">Add Floor</a>
+        <a th:href="@{/admin/add-spot}">Add Spot</a>
+        <a th:href="@{/admin/tickets}">View Tickets</a>
+
+        <a th:href="@{/}" class="back-btn">Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

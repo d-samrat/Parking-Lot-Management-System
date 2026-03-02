@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Park Vehicle</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            min-width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            color: #2a5298;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #2a5298;
+            outline: none;
+            box-shadow: 0 0 5px rgba(42, 82, 152, 0.3);
+        }
+
+        .btn {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2a5298;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1e3c72;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Park Vehicle</h2>
+
+    <form th:action="@{/park}" th:object="${parkRequest}" method="post">
+
+        <div class="form-group">
+            <label>Registration Number</label>
+            <input type="text" th:field="*{regNumber}" required/>
+        </div>
+
+        <div class="form-group">
+            <label>Vehicle Type</label>
+            <select th:field="*{vehicleType}">
+                <option th:each="type : ${vehicleTypes}"
+                        th:value="${type}"
+                        th:text="${type}">
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">Park Vehicle</button>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Ticket</title>
+
+  <style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        background: white;
+        padding: 40px 60px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        min-width: 320px;
+    }
+
+    h2 {
+        color: #2a5298;
+        margin-bottom: 25px;
+    }
+
+    .info {
+        font-size: 16px;
+        margin: 12px 0;
+        color: #333;
+    }
+
+    .info span {
+        font-weight: bold;
+        color: #1e3c72;
+    }
+
+    .home-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 10px 20px;
+        background-color: #2a5298;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    .home-btn:hover {
+        background-color: #1e3c72;
+        transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>✅ Vehicle Parked Successfully</h2>
+
+  <p class="info">
+    Ticket ID: <span th:text="${ticket.id}"></span>
+  </p>
+
+  <p class="info">
+    Entry Time: <span th:text="${ticket.entryTime}"></span>
+  </p>
+
+  <a th:href="@{/}" class="home-btn">Go Home</a>
+</div>
+
+</body>
+</html>
